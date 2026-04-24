@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-# students/views.py
+
 from rest_framework import generics, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Student
@@ -14,8 +14,8 @@ class StudentListCreateView(generics.ListCreateAPIView):
 
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
 
-    filterset_fields = ['age']       # ?age=20
-    ordering_fields = ['name']       # ?ordering=name
+    filterset_fields = ['age']       
+    ordering_fields = ['name']       
 
 
 class StudentDetailView(generics.RetrieveUpdateDestroyAPIView):
