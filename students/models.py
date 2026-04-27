@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-# students/models.py
 from django.db import models
 
 class Student(models.Model):
